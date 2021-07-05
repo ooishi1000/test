@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #grid {
+        display: grid;
+        grid-template-columns: repeat(5, 100px);
+        grid-template-rows: repeat(5, 100px);
+    }
+
+    #button {
+        display: grid;
+        grid-template-columns: repeat(3, 100px);
+        grid-template-rows: repeat(1, 100px);
+    }
+
+    .buttonitem {
+        border: 1px solid rgb(0, 0, 0);
+        border-radius: 100%;
+        background-color: aquamarine;
+    }
+
+    .counter {
+        font-size: 450%;
+        text-align: center;
+        border: 1px solid black;
+    }
+</style>
+
+<body>
+    <div id="grid">
+
+    </div>
+    <div id="button">
+        <div class="buttonitem"></div>
+        <div class="buttonitem"></div>
+        <div class="buttonitem"></div>
+    </div>
+</body>
+<script>
+    
+        let boxNumber = 1;
+        for (let i = 0; i < 25; i++) {
+            let number = Math.floor(Math.random() * 99 + 1);
+            const box = document.createElement("div");
+            box.id = boxNumber;
+            boxNumber = boxNumber + 1;
+            box.className = "counter";
+            const grid = document.getElementById("grid");
+            grid.appendChild(box);
+            box.textContent = number;
+        };
+    
+
+</script>
+
+</html>
