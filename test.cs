@@ -1,3 +1,5 @@
+//paiza問題集　連想配列
+
 using System;
 using System.Collections.Generic;
 
